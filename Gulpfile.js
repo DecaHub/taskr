@@ -155,7 +155,6 @@ gulp.task("init", function() {
 	
 });
 
-
 /********************************************************************************
  Cleaning Tasks
  ********************************************************************************/
@@ -222,7 +221,7 @@ gulp.task("transpile", function () {
 
 gulp.task('imageop', function () {
 	
-	runSequence("imageop:helper", "reload:browser");
+	runSequence("imageop:helper", "reload:browser", "message:success");
 	
 });
 
@@ -231,6 +230,12 @@ gulp.task("imageop:helper", function () {
 	return gulp.src(srcFiles.images)
 		.pipe(imagemin())
 		.pipe(gulp.dest("app/dist"));
+	
+});
+
+gulp.task("message:success", function () {
+	
+	return log.success("Images have been processed.")
 	
 });
 
@@ -489,12 +494,6 @@ gulp.task('img-watch', function(){
 		
 		let fullPathArray = fullPath.split("/");
 		let index = 0;
-		
-		console.log(fullPath);
-		console.log(rootToImg);
-		console.log(fileNameBase);
-		console.log(pathToImg);
-		console.log(fullPathToImg);
 		
 		for (let i = 0; i < fullPathArray.length; i++) {
 

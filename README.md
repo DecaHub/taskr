@@ -1,5 +1,33 @@
 # taskr: Code Challenge
 
+## Set up:
+
+After cloning the project, please run the following:
+
+If you have `yarn` installed:
+
+Note: This requires `yarn v0.16` or higher.
+
+`yarn start`
+
+If you prefer to use `npm`, please modify the `package.json` file `script` property:
+
+From:
+
+`"start": "yarn && bower install && gulp"`
+
+to:
+
+`"start": "npm install && bower install && gulp"`
+
+and then run:
+
+`npm start`
+
+`start` is a script that will install the node and bower packages as well as start the Gulp automatic build workflow. Gulp will be running continuously in the background until you decide to stop it (CTRL + C in the Mac). A browser tab/window will open to display the application. Every time that you make a change to a non-library, non-node-module .css, .html, .js or image file, the browser will reload and display the changes automatically.
+
+**Note** While images are being processed and placed in the `dist` folder, the application will show broken links or absent images. Please wait for the image processing to be done to interact with the application. A message stating `Images have been processed` will display in green in the Terminal.
+
 ## App Requirements
 
 ### Core Goal
@@ -18,7 +46,7 @@ Create a Single Page Application in which the homepage lists a set of Tasks the 
 
 ### Evaluation Criteria
 
-* Quality of JavaScript  and AngularJS code.
+* Quality of JavaScript and AngularJS code.
     * Production quality.
     * Maintainable.
         * Follow Clean Code best practices.
