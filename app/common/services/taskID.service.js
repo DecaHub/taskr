@@ -12,24 +12,22 @@
 	 * @description Creates a unique ID for a task.
 	 */
 	
-	app.factory("TaskIDService", TaskIDService);
-	
-	function TaskIDService() {
+	const TaskIDService = function () {
 		
 		let taskID = 0;
 		
-		let increaseTaskID = function () {
+		const increaseTaskID = function () {
 			
-			return taskID++;
+			taskID += 1;
+			
+			return taskID;
 			
 		};
 		
-		return {
-			
-			getID: increaseTaskID,
-			
-		}
+		return {getID: increaseTaskID};
 		
-	}
+	};
+	
+	app.factory("TaskIDService", TaskIDService);
 	
 }(angular.module("main")));

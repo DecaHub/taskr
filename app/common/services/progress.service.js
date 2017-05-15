@@ -35,6 +35,7 @@
 			return tasksCompleted;
 			
 		};
-	})
+		
+	});
 	
 }(angular.module("main")));
