@@ -28,6 +28,14 @@ and then run:
 
 **Note** While images are being processed and placed in the `dist` folder, the application will show broken links or absent images. Please wait for the image processing to be done to interact with the application. A message stating `Images have been processed` will display in green in the Terminal.
 
+## Build for Production
+
+To build the project for its optimized production version, please run the following Gulp command:
+
+`gulp build:docs`
+
+Images will be optimized. JavaScript source code will be minified, uglified and bundled into one file. Vendor files from Bower will be bundled into one file. CSS stylesheets will be bundled into one file as well. Empty folders will be deleted.
+
 ## App Requirements
 
 ### Core Goal

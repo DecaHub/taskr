@@ -87,6 +87,8 @@ let srcFiles = {
 		"!app/lib/**",
 		"!app/dist",
 		"!app/dist/**",
+		"!app/favicon",
+		"!app/favicon/**",
 		"app/**/*.png",
 		"app/**/*.jpg",
 		"app/**/*.jpeg",
