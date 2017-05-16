@@ -673,6 +673,16 @@ gulp.task('copy:dist:docs:images', function() {
 	
 });
 
+gulp.task('copy:dist:docs:favicon', function() {
+	
+	return gulp.src([
+			"app/favicon",
+		])
+		.pipe(imagemin())
+		.pipe(gulp.dest("./docs"));
+	
+});
+
 /**
  * Copies lib content to docs
  */
@@ -782,6 +792,6 @@ gulp.task('inject:docs', function () {
  */
 gulp.task("build:docs", function () {
 	
-	runSequence("clean:docs", "copy:dist:docs:js", "copy:dist:docs:css", "copy:dist:docs:images", "copy:others:docs", "copy:lib:docs", "delete:folders:empty", "delete:bower", "inject:docs");
+	runSequence("clean:docs", "copy:dist:docs:js", "copy:dist:docs:css", "copy:dist:docs:images", "copy:dist:docs:favicon", "copy:others:docs", "copy:lib:docs", "delete:folders:empty", "delete:bower", "inject:docs");
 	
 });
