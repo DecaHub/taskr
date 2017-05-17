@@ -32,7 +32,10 @@
 		
 		const byteArray = new Uint8Array(1);
 		
-		window.crypto.getRandomValues(byteArray);
+		// For IE 11
+		const cryptoObj = window.crypto || window.msCrypto;
+		
+		cryptoObj.getRandomValues(byteArray);
 		
 		const range = max - min + 1;
 		
