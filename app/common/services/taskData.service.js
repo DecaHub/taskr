@@ -20,7 +20,7 @@
 		`Watch "Senior Devs react to React" on YouTube.`,
 		`Do 40 minutes of Standing Desk Yoga`,
 		`Do 60 minutes of Start-Up Swiss Ball Calisthenics`,
-		`Watch "Silicone Valley" Season 4 on HBO.`,
+		`Watch "Silicon Valley" Season 4 on HBO.`,
 		`Pet a cow.`
 	];
 	
