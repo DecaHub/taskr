@@ -7,8 +7,11 @@
 		
 		<h2>{{::$ctrl.taskboardTitle}}</h2>
 		
-		<div id="home" class="navButton placer" ng-click="$ctrl.flipShowTasks()">
-			<i class="fa fa-home" aria-hidden="true" ng-if="$ctrl.showTasks"></i>
+		<div id="home" class="navButton placer">
+			<i class="fa fa-home"
+			   aria-hidden="true"
+			   ng-click="$ctrl.flipShowTasks()"
+			   ng-if="$ctrl.showTasks"></i>
 		</div>
 		
 	</div>
@@ -22,8 +25,11 @@
 					size="180"
 					cycle="$ctrl.taskList.length">
 			</dh-progress-disk>
-			<div id="list" class="navButton" ng-click="$ctrl.flipShowTasks()">
-				<i class="fa fa-list" aria-hidden="true"></i>
+			<div id="list" class="navButton">
+				<i class="fa fa-list"
+				   aria-hidden="true"
+				   ng-click="$ctrl.flipShowTasks()"
+				></i>
 			</div>
 		</div>
 		
